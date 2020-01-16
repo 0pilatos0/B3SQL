@@ -1,0 +1,15 @@
+1. INSERT INTO animal (`type`,`speed`,`defense`,`loyalty`,`owner`) VALUES ("hond", 6, 6, 0, 0) 
+2. SELECT * FROM `animal` WHERE `type` = "hond" 
+3. UPDATE animal SET `speed` = 7, `defense` = 5 WHERE `id` =110 
+4. SELECT * FROM `animal` WHERE `id` = 110
+5. UPDATE animal SET `type` = 0,`speed` = 0,`defense`=0,`loyalty`=0,`owner`=0 WHERE id = 110
+6. SELECT * FROM `animal` WHERE `id` = 110
+7. DELETE * FROM `animal` WHERE id=110 
+8. SELECT * FROM `animal` WHERE `id` = 110 geeft geen waarde terug
+9. INSERT INTO animal (`type`,`speed`,`defense`,`loyalty`,`owner`) VALUES (0, 0, 0, 0, 0) 
+   INSERT INTO animal (`type`,`speed`,`defense`,`loyalty`,`owner`) VALUES (0, 0, 0, 0, 0) 
+   SELECT * FROM `animal`
+10. UPDATE animal SET `type` = 0,`speed` = 6,`defense`=6,`loyalty`=0,`owner`=0 WHERE id = 111
+    UPDATE animal SET `type` = 0,`speed` = 6,`defense`=6,`loyalty`=0,`owner`=0 WHERE id = 112
+11. DELETE * FROM `animal` WHERE id=111
+    DELETE * FROM `animal` WHERE id=112

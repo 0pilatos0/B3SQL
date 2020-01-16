@@ -1,0 +1,52 @@
+DISTINCT
+1. SELECT DISTINCT `type` FROM animal
+2. SELECT DISTINCT `profession` FROM npc
+
+AND, OR and NOT
+1. SELECT * FROM creature WHERE `name` = "Killer Bee" OR `name` = "Orc" 
+2. SELECT * FROM `animal` WHERE `speed` >= 6 AND `defense` >= 5 
+3. SELECT * FROM `animal` WHERE NOT `type` = "Sheep" 
+4. SELECT * FROM `animal` WHERE `type` = "Wolf" OR "Bear" OR "Eagle" 
+5. SELECT * FROM `person` WHERE `attack`AND`defense`AND`agility` = 10 
+6. SELECT * FROM `city` WHERE `region` = 1 OR 2 
+7. SELECT * FROM `hero` WHERE NOT `intelligence` = 30 OR 90 
+
+MIN and MAX
+1. SELECT MIN(`speed`) FROM animal
+2. SELECT MAX(`speed`) FROM animal
+3. SELECT MIN(`attack`) FROM weapon
+4. SELECT MAX(`price`) FROM weapon
+
+BETWEEN and SQL operators
+1. SELECT * FROM `weapon` WHERE `price` >= 100 AND `price` <= 1000 
+2. SELECT * FROM `weapon` WHERE `attack` >= 300 AND `attack` <= 600 
+3. SELECT COUNT(`id`) FROM animal WHERE `defense` >= 7 AND `defense` <= 9 
+4. SELECT * FROM `person` WHERE `gold` >= 1800 
+5. SELECT * FROM `person` WHERE `gold` >= 1850 
+6. SELECT * FROM `person` WHERE `gold` >= 1850 
+7. SELECT * FROM `weapon` WHERE `price` < 300 
+
+LIKE
+1. SELECT * FROM `person` WHERE `name` LIKE "B%" 
+2. SELECT * FROM `animal` WHERE `type` LIKE "%a%" 
+3. SELECT * FROM `animal` WHERE `type` LIKE "%ea%" 
+4. SELECT * FROM `weapon` WHERE `name` LIKE "%d" 
+
+TOP, LIMIT or ROWNUM
+1. SELECT * FROM `person` LIMIT 10 
+2. SELECT * FROM weapon ORDER BY `price` DESC LIMIT 5 
+3. SELECT * FROM `weapon` WHERE `attack` >= 700 AND `attack` <= 900 ORDER BY `attack` DESC LIMIT 3 
+
+Rubyquest Vragen 2
+
+1. SELECT `name` FROM `creature` WHERE `health` < `max_health` 
+2. SELECT * FROM `quest` WHERE `gold` = 0 
+3. SELECT COUNT(`region`) FROM city WHERE `region` = 3  HUH?????????????
+4. SELECT * FROM `animal` WHERE `owner` > 0 
+5. SELECT * FROM `quest` WHERE `experience` > 3000 
+6. SELECT * FROM `quest` WHERE `gold` > `experience` 
+7. SELECT `weapon` FROM `person` WHERE `name` = "Bowser" 
+8. SELECT `id`,`type`,`speed` FROM `animal` ORDER BY `speed` DESC LIMIT 1 
+9. SELECT * FROM `npc` WHERE `person` = "Mukovo"
+10. SELECT `owner`,`type` FROM `animal` WHERE `owner` > 0 
+11. SELECT * FROM `region` WHERE `name` = "South Groval"

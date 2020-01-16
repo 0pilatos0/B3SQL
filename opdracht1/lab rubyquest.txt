@@ -1,0 +1,22 @@
+SELECT *
+1. SELECT * FROM `hero` 
+2. SELECT * FROM `person` 
+3. SELECT COUNT(`person`) FROM npc
+4. SELECT `title` FROM `quest` 
+5. SELECT COUNT(`id`) FROM animal
+6. SELECT `name` FROM `creature` WHERE 1
+7. SELECT * FROM `person` ORDER BY `person`.`name` ASC 
+8. SELECT * FROM `city` ORDER BY `city`.`name` DESC 
+9. SELECT COUNT(`id`) FROM city
+
+SELECT [column], [column]
+1. SELECT `name` FROM armor
+2. SELECT `name`,`atack` FROM `weapons`
+3. SELECT `name`,`health` FROM `creature` 
+
+SELECT WHERE
+1. SELECT * FROM `animal` WHERE `type` = "Sheep" 
+2. SELECT COUNT(`id`) FROM animal WHERE `type` = "Sheep" 
+3. SELECT COUNT(`id`) FROM animal WHERE `type` = "Sea Snake" 
+4. SELECT `name` FROM `person` WHERE `id` = 7 
+5. via hetzelfde
