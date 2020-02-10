@@ -20,13 +20,20 @@
 
         $pdo = new PDO($dsn, $user, $password);
 
-        $stmt = $pdo->query('SELECT * FROM games');
+        $stmt = $pdo->query('SELECT * FROM records ORDER BY `records`.`start_time` ASC');
     ?>
     <div class="test">
-      <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){ echo $row['name'] .
-      "<br />"; } ?>
-     <a class="btn btn-primary" href="./add.php " role="button">Add</a>
-     <a class="btn btn-primary" href="./overview.php" role="button">Overview</a>
+      <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
+          echo "ID " . $row['id']." --- Game ";
+          echo $row['game']. " <br>";
+          echo "Instructeur:  ".$row['instructor']. "<br>";
+          echo "Medespelers:  ".$row['Players']. "<br>";
+          echo "Start Tijd:  ".$row['start_time'] . " --- Duratie:  ". $row['Duratie']." Min<br><br>";
+          
+          } ?>
+    <a class="btn btn-primary" href="./index.php " role="button">terug</a>
+    <a class="btn btn-primary" href="./edit.php" role="button">Bewerk</a>
+    <a class="btn btn-primary" href="./info.php" role="button">info</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

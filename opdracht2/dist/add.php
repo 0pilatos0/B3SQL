@@ -25,7 +25,7 @@
     <div class="test">
       <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){ echo $row['name'] .
       "<br />"; } ?>
-      <form class="was-validated" action="infoo.php" method="post">
+      <form class="was-validated" action="addd.php" method="post">
         <div class="form-group">
           <select name="input" class="custom-select" required>
             <option value="">Spellen \/</option>
@@ -58,7 +58,7 @@
           <div class="invalid-feedback">Kies een van de Spellen</div>
         </div>
         <button class="btn btn-primary" type="submit">Submit form</button>
-        <a class="btn btn-primary" href="./overview.php " role="button">terug</a>
+        <a class="btn btn-primary" href="./index.php " role="button">terug</a>
       </form>
     </div>
 
